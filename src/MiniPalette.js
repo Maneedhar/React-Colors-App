@@ -9,6 +9,7 @@ const styles = {
 		padding: '0.5rem',
 		position: 'relative',
 		overflow: 'hidden',
+		cursor: 'pointer',
 		'& hover': {
 			cursor: 'pointer'
 		}
@@ -50,7 +51,7 @@ export default withStyles(styles)(function MiniPalette(props) {
 	));
 
 	return (
-		<div className={classes.root}>
+		<div className={classes.root} onClick={props.handleClick}>
 			<div className={classes.colors}>{miniColorBoxes}</div>
 			<h5 className={classes.title}>
 				{paletteName}
